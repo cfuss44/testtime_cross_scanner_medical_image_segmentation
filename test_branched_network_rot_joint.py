@@ -252,7 +252,7 @@ def run_training():
         # restore shared weights
         # ================================================================
         logging.info('============================================================')
-        model_path = os.path.join(sys_config.log_root, 'Initial_training_whole_network')
+        model_path = os.path.join(sys_config.log_root, 'Initial_training_joint_network')
         checkpoint_path = utils.get_latest_model_checkpoint_path(model_path, 'models/best_dice.ckpt')
         logging.info('Restroring session from: %s' %checkpoint_path)
         saver.restore(sess, checkpoint_path)
